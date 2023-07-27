@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+</head>
+<body>
+    <h1>Вы бросили два кубика, число {{result1}} и {{result2}}</h1>
+    <img src="/static/{{result1}}.jpg">
+    <img src="/static/{{result2}}.jpg">
+
+    {% if result1 == result2 == 6 %}
+        <h1>Максимальный дубль!</h1>
+    {% elif result1 == result2 %}
+        <h1>Дубль!</h1>
+    {% else %}
+        <h1>Без выигрыша</h1>
+    {% endif %}
+
+</body>
+</html>
